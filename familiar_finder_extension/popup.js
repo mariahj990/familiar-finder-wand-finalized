@@ -1,0 +1,65 @@
+const messages = [
+  "Your familiar says: Trust your intuition today!",
+  "A sprinkle of cinnamon brings good fortune.",
+  "Speak your dreams aloud under the moonlight.",
+  "Your familiar purrs: Take a magical break!",
+  "A cup of tea can be a powerful potion.",
+  "Whisper your wishes to the stars tonight.",
+  "The moonlight reveals hidden paths.",
+  "Light a candle to ignite your inner spark.",
+  "Brew a potion of calm with chamomile and honey.",
+  "Let your heart guide you through the mist.",
+  "Magic flows strongest when your mind is still.",
+  "Dance with the shadows and embrace the night.",
+  "A feather’s touch carries blessings your way.",
+  "Collect moonbeams in a jar of dreams.",
+  "Your familiar hums: Be brave and take the leap.",
+  "Write your spells with words of kindness.",
+  "Trust the rhythm of the universe today.",
+  "Sprinkle stardust on your hopes and watch them grow.",
+  "The winds whisper secrets meant just for you.",
+  "Carry a talisman close to protect your journey.",
+  "Your familiar winks: Curiosity will open new doors.",
+  "The roots of your soul crave nourishment—feed it magic.",
+  "Sing softly to the dawn and welcome new beginnings.",
+  "A silver coin brings luck to your endeavors.",
+  "Plant seeds of joy wherever you wander.",
+  "The stars align in your favor—trust their guidance.",
+  "Your familiar nudges: A little mischief will brighten your day.",
+  "Sip moonlight like a potion to calm your spirit.",
+  "Blaze a trail of kindness wherever you step.",
+  "Gather crystals to amplify your inner power.",
+  "The magic of friendship is your strongest charm.",
+  "Tune your heartstrings to the song of the forest.",
+  "Remember: even dragons started as hatchlings.",
+  "Your familiar purrs: Embrace change—it’s part of the spell.",
+  "Wrap yourself in a cloak of courage today.",
+  "Let laughter bubble up like a bubbling cauldron.",
+  "A whispered spell can change your fate.",
+  "Trace the patterns of the stars with your fingertips.",
+  "The potion of patience will serve you well.",
+  "Dream big—magic thrives on bold wishes.",
+  "A good book is a gateway to a thousand worlds.",
+  "Your familiar says: Take time to breathe and be still.",
+  "A sprinkle of salt wards off bad luck.",
+  "Celebrate the small miracles around you.",
+  "Let the rhythm of the rain cleanse your worries.",
+  "Find beauty in the ordinary—it’s often enchanted.",
+  "Your familiar whispers: Trust your own magic.",
+  "A charm bracelet carries memories and magic alike.",
+  "Step lightly—magic sometimes hides in plain sight.",
+  "Wrap your dreams in moonlight and hold them close.",
+  "The dawn brings fresh magic with every sunrise.",
+  "A dash of courage spices up even the darkest days.",
+  "Your familiar nods: Believe in the impossible today.",
+  "Magic begins with a single spark—kindle yours."
+];
+
+function showMessage() {
+  const msg = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("message").innerText = msg;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('summonBtn').addEventListener('click', showMessage);
+});

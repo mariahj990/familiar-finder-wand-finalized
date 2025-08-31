@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Familiar Finder + Enchanted Cursor",
+  "version": "1.0",
+  "description": "Summon your magical familiar and enjoy a magical sparkle trail on your cursor!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["sparkle.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
