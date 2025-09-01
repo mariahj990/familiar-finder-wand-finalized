@@ -11,7 +11,7 @@ const messages = [
   "Let your heart guide you through the mist.",
   "Magic flows strongest when your mind is still.",
   "Dance with the shadows and embrace the night.",
-  "A feather’s touch carries blessings your way.",
+  "A feather's touch carries blessings your way.",
   "Collect moonbeams in a jar of dreams.",
   "Your familiar hums: Be brave and take the leap.",
   "Write your spells with words of kindness.",
@@ -32,7 +32,7 @@ const messages = [
   "The magic of friendship is your strongest charm.",
   "Tune your heartstrings to the song of the forest.",
   "Remember: even dragons started as hatchlings.",
-  "Your familiar purrs: Embrace change—it’s part of the spell.",
+  "Your familiar purrs: Embrace change—it's part of the spell.",
   "Wrap yourself in a cloak of courage today.",
   "Let laughter bubble up like a bubbling cauldron.",
   "A whispered spell can change your fate.",
@@ -44,15 +44,15 @@ const messages = [
   "A sprinkle of salt wards off bad luck.",
   "Celebrate the small miracles around you.",
   "Let the rhythm of the rain cleanse your worries.",
-  "Find beauty in the ordinary—it’s often enchanted.",
+  "Find beauty in the ordinary it's often enchanted.",
   "Your familiar whispers: Trust your own magic.",
   "A charm bracelet carries memories and magic alike.",
-  "Step lightly—magic sometimes hides in plain sight.",
+  "Step lightly magic sometimes hides in plain sight.",
   "Wrap your dreams in moonlight and hold them close.",
   "The dawn brings fresh magic with every sunrise.",
   "A dash of courage spices up even the darkest days.",
   "Your familiar nods: Believe in the impossible today.",
-  "Magic begins with a single spark—kindle yours."
+  "Magic begins with a single spark kindle yours."
 ];
 
 function showMessage() {
@@ -62,4 +62,27 @@ function showMessage() {
 
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('summonBtn').addEventListener('click', showMessage);
+
+  
+  // store the click count
+  let count = 0;
+
+  // get references to DOM elements
+  const button = document.getElementById("summonBtn");
+  const counter = document.getElementById("counter");
+
+  // add click counter
+  button.addEventListener("click", () => {
+    count++; // increment
+    counter.textContent = "Clicks: " + count;
+  });
+
+  const invertButton = document.getElementById("invert-button");
+
+  // add invert colors functionality
+  invertButton.addEventListener("click", () => {
+    document.body.classList.toggle("inverted");
+  });
+  
 });
+

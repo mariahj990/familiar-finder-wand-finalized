@@ -44,3 +44,7 @@ body {
     background-color: #e67e22;
     box-shadow: 0 0 12px rgba(243, 156, 18, 0.8);
 }
+
+body.inverted {
+  filter: invert(1) hue-rotate(180deg);
+}
